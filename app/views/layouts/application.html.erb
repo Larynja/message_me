@@ -19,15 +19,11 @@
   </head>
 
   <body>
-    <div class="ui teal small inverted  menu">
-      <div class="ui container">
-       <%= render 'layouts/navigation' %>
-       <%= render 'layouts/messages'%>
-      </div>
-    </div>
-
+      <%= render 'layouts/navigation' %>
     <div class="ui container">
+      <%= render 'layouts/messages'%>
       <%= yield %>
     </div>
+
   </body>
 </html>
