@@ -7,6 +7,8 @@ class MessagesController < ApplicationController
       ActionCable.server.broadcast("chatroom_channel", 
             { mod_msg: render_message(message) }
           )
+    else
+      render :new, status: 422
     end
   end
 
@@ -17,7 +19,7 @@ class MessagesController < ApplicationController
   end
 
   def render_message(message)
-    render partial: 'message', locals: { message: message }
+    render partial: 'message', locals: { message: message }, status: 303
   end
 
 end

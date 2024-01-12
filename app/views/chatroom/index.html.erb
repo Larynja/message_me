@@ -14,13 +14,13 @@
       </div>
 
       <div class="extra content">
-        <%= form_with(model: @message, local: true, html: {class:"ui reply form", role: "form"}, url: message_path, remote: true ) do |f| %>
+        <%= form_with(model: @message, html: { class: "ui reply form", role: "form", id: "new-message-form" }, url: message_path, remote: true) do |f| %>
           <div class="field">
             <div class="ui fluid icon input">
-              <%= f.text_field :body, class: "", placeholder: "Enter a message" %>
+              <%= f.text_field :body, placeholder: "Enter a message" %>
               <%= f.button '<i class="bordered inverted teal edit icon"></i>'.html_safe %>
             </div>
-          </div>         
+          </div>
         <% end %>
       </div>
 

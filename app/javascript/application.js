@@ -3,7 +3,9 @@
 import "jquery";
 import "semantic-ui";
 
-// import '@hotwired/turbo-rails';
+import "@hotwired/turbo-rails"
+
+
 // import '@hotwired/stimulus';
 // import '@hotwired/stimulus-loading';
 
@@ -13,29 +15,21 @@ import "semantic-ui";
 import "./controllers"
 import "./channels"
 
-
-// window.jQuery = jquery
-// window.$ = jquery
-
-console.log("Hello from application.js");
-// alert("JavaScript is working!");
-
-$('.ui.dropdown')
-  .dropdown()
-;
-
-// $(document).on('turbo:load', function() {
-//     console.log('loaded turbo links')
-//     $('.ui.dropdown').dropdown();
-//     $('.message .close').on('click', function() { 
-//      $(this).closest('.message').transition('fade')     
-//     });
-// })
+document.addEventListener('turbo:submit-end', function(event) {
+  console.log('Turbo Drive handled form submission:', event);
+});
 
 
-// // add auto scroll to bottom in messages
-// $(document).on('turbo:load', function() {
-//     if ($('#messages').length > 0) {
-//     $('#messages').scrollTop($('#messages')[0].scrollHeight);
-//     }
-//   })
+// semantic ui dropdown menu
+$(document).on('turbo:load', function() {
+  console.log('loaded turbo links')
+  $('.ui.dropdown').dropdown()
+});
+
+
+// add auto scroll to bottom in messages
+$(document).on('turbo:load', function() {
+  if ($('#messages').length > 0) { 
+    $('#messages').scrollTop($('#messages')[0].scrollHeight);
+  }
+}) 
