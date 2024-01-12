@@ -6,6 +6,7 @@ class ChatroomChannel < ApplicationCable::Channel
   
   def receive(data)
     ActionCable.server.broadcast("chatroom_channel", data)
+    puts "chatroom_rannel.rb receive"
   end
 
   def unsubscribed

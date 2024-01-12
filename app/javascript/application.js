@@ -10,8 +10,8 @@ import "semantic-ui";
 // // Import the ActionCable module
 // import '@rails/actioncable';
 
-// import "./controllers"
-// import "./channels"
+import "./controllers"
+import "./channels"
 
 
 // window.jQuery = jquery
