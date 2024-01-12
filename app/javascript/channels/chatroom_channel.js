@@ -15,6 +15,7 @@ consumer.subscriptions.create("ChatroomChannel", {
     // Called when there's incoming data on the websocket for this channel
     $('#message-container').append(data.mod_msg);
     $('#messages').scrollTop($('#messages')[0].scrollHeight);
-    console.log("!!!! #{data.mod_msg}")
+    console.log("!!!!", data.mod_msg);
+    alert("Chat is working!");
   }
 });
