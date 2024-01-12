@@ -5,7 +5,6 @@ import "semantic-ui";
 
 import "@hotwired/turbo-rails"
 
-
 // import '@hotwired/stimulus';
 // import '@hotwired/stimulus-loading';
 
@@ -15,17 +14,15 @@ import "@hotwired/turbo-rails"
 import "./controllers"
 import "./channels"
 
-document.addEventListener('turbo:submit-end', function(event) {
-  console.log('Turbo Drive handled form submission:', event);
-});
-
+// document.addEventListener('turbo:submit-end', function(event) {
+//   console.log('Turbo Drive handled form submission:', event);
+// });
 
 // semantic ui dropdown menu
 $(document).on('turbo:load', function() {
   console.log('loaded turbo links')
   $('.ui.dropdown').dropdown()
 });
-
 
 // add auto scroll to bottom in messages
 $(document).on('turbo:load', function() {
